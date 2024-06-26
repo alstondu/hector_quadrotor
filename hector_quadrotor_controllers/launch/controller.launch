@@ -15,6 +15,6 @@
 
   <node name="estop_relay" pkg="topic_tools" type="relay" args="/estop estop">
     <param name="lazy" value="true" />
-  </node>
+  </node> 
 
 </launch>
