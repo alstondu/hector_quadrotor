@@ -5,6 +5,7 @@
   <!-- Quadrotor Sensor Plugins -->
   <xacro:macro name="quadrotor_sensors">
         <gazebo>
+          
           <plugin name="quadrotor_imu_sim" filename="libhector_gazebo_ros_imu.so">
             <updateRate>100.0</updateRate>
             <bodyName>base_link</bodyName>
@@ -55,10 +56,10 @@
 
           <plugin name="quadrotor_groundtruth_sim" filename="libgazebo_ros_p3d.so">
             <updateRate>100.0</updateRate>
-            <bodyName>base_link</bodyName>
+            <bodyName>front_cam_link</bodyName>
             <topicName>ground_truth/state</topicName>
-            <gaussianNoise>0.0</gaussianNoise>
-            <frameName>$(arg world_frame)</frameName>
+            <alwaysOn>true</alwaysOn>
+            <frameName>world</frameName>
           </plugin>
 
         </gazebo>
