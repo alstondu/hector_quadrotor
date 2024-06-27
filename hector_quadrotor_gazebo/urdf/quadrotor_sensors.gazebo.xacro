@@ -56,7 +56,7 @@
 
           <plugin name="quadrotor_groundtruth_sim" filename="libgazebo_ros_p3d.so">
             <updateRate>100.0</updateRate>
-            <bodyName>front_cam_link</bodyName>
+            <bodyName>base_link</bodyName>
             <topicName>ground_truth/state</topicName>
             <alwaysOn>true</alwaysOn>
             <frameName>world</frameName>
